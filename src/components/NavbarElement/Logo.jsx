@@ -1,4 +1,5 @@
-import viteLogo from '../../../public/vite.svg'
+// import viteLogo from '../../../public/vite.svg'
+import viteLogo from '../../assets/vite.svg'
 
 export default function Logo() {
     return (
