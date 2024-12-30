@@ -10,7 +10,7 @@ export default function Navbar({}) {
                 <Icon />
                 <Logo />
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center w-[110rem] sm:w-7/12 lg:max-w-3xl">
                 <Searchbar />
                 <Button additionClass="ml-4 rounded-full p-2 border">
                     <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 16">
