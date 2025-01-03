@@ -1,13 +1,15 @@
 import Logo from "../NavbarElement/Logo";
-import Icon from "../NavbarElement/Icon";
 import Searchbar from "../Searchbar";
 import Button from "../Searchbar/Button";
+import { RxHamburgerMenu } from "react-icons/rx";
 
-export default function Navbar({}) {
+export default function Navbar() {
     return (
         <div className="py-2 px-6 flex items-center justify-between">
             <div className="flex items-center">
-                <Icon />
+                <div className="rounded-full text-2xl p-2 hover:bg-slate-200">
+                    <RxHamburgerMenu />
+                </div>
                 <Logo />
             </div>
             <div className="flex items-center w-[110rem] sm:w-7/12 lg:max-w-3xl">
