@@ -1,12 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import ErrorPage from './pages/404'
-import Beranda from './pages/beranda'
-import Navbar from './components/layout/navbar'
-import SideBar from './components/layout/SideBar'
-import { SidebarProvider } from './contexts/SidebarContext'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import './index.css';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import ErrorPage from './pages/404';
+import { SidebarProvider } from './contexts/SidebarContext';
+
+import Navbar from './components/Navbar';
+import SideBar from './components/Sidebar';
+
+import Beranda from './pages/beranda';
 
 const router = createBrowserRouter([
   {
@@ -23,13 +25,11 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <SidebarProvider>
-      <div>
-        <Navbar />
-        <div className="flex flex-col flex-1">
-          <SideBar />
-          <RouterProvider router={router} />
-        </div>
+      <Navbar />
+      <div className="flex">
+        <SideBar />
+        <RouterProvider router={router} />
       </div>
     </SidebarProvider>
-  </StrictMode>,
+  </StrictMode>
 )
