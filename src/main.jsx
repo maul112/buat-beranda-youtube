@@ -9,6 +9,7 @@ import Navbar from './components/Navbar';
 import SideBar from './components/Sidebar';
 
 import Beranda from './pages/beranda';
+import { SearchbarProvider } from './contexts/SearchbarContext';
 
 const router = createBrowserRouter([
   {
@@ -25,11 +26,13 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <SidebarProvider>
-      <Navbar />
-      <div className="flex">
-        <SideBar />
-        <RouterProvider router={router} />
-      </div>
+      <SearchbarProvider>
+        <Navbar />
+        <div className="flex">
+          <SideBar />
+          <RouterProvider router={router} />
+        </div>
+      </SearchbarProvider>
     </SidebarProvider>
   </StrictMode>
 )

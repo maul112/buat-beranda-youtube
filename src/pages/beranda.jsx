@@ -1,10 +1,9 @@
+import { useSearchbar } from "../contexts/SearchbarContext";
 import { useSidebar } from "../contexts/SidebarContext";
 
 export default function Beranda() {
-    const { isOpen } = useSidebar();
+    const { search } = useSearchbar();
     return (
-        <>
-            <main className="p-4">tes</main>
-        </>
+        <main className="p-4">{search}</main>
     )
 }

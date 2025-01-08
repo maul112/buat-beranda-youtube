@@ -1,10 +1,10 @@
 import { useSidebar } from "../../contexts/SidebarContext";
+
 import Logo from "./Logo";
 import Searchbar from "./SearchBar";
 import Button from "../ui/Button";
 
 import { RxHamburgerMenu } from "react-icons/rx";
-import { CiSearch } from "react-icons/ci";
 import { IoIosMic } from "react-icons/io";
 import { GoPlus } from "react-icons/go";
 import { CiBellOn } from "react-icons/ci";
