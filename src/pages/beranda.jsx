@@ -5,8 +5,8 @@ import { useSidebar } from "../contexts/SidebarContext";
 export default function Beranda() {
     // const { search } = useSearchbar();
     return (
-        <main className="p-4 bg-red-500 w-full">
-            <Category></Category>
+        <main className="p-4 w-full">
+                <Category></Category>
         </main>
     )
 }
