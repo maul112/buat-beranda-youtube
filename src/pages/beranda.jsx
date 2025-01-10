@@ -1,9 +1,12 @@
-import { useSearchbar } from "../contexts/SearchbarContext";
+// import { useSearchbar } from "../contexts/SearchbarContext";
+import Category from "../components/Category";
 import { useSidebar } from "../contexts/SidebarContext";
 
 export default function Beranda() {
-    const { search } = useSearchbar();
+    // const { search } = useSearchbar();
     return (
-        <main className="p-4">{search}</main>
+        <main className="p-4 bg-red-500 w-full">
+            <Category></Category>
+        </main>
     )
 }

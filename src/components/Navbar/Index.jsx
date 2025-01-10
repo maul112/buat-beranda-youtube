@@ -22,7 +22,7 @@ export default function Navbar() {
                 </div>
                 <Logo />
             </div>
-            <div className="flex items-center sm:w-7/12 lg:max-w-3xl lg:w-[110rem] sm:mr-2 md:mr-0">
+            <div className="flex items-center shadow-inner sm:w-7/12 lg:max-w-3xl lg:w-[110rem] sm:mr-2 md:mr-0">
                 <Searchbar />
                 <Button additionClass="bg-transparent sm:bg-slate-100 sm:ml-4 rounded-full p-2 sm:border">
                     <IoIosMic />
