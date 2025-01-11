@@ -4,9 +4,10 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import ErrorPage from './pages/404'
 import Beranda from './pages/beranda'
-import Navbar from './components/layout/navbar'
+import Navbar from './components/layout/Navbar'
 import SideBar from './components/layout/SideBar'
 import { SidebarProvider } from './contexts/SidebarContext'
+import Short from './pages/short'
 
 const router = createBrowserRouter([
   {
@@ -15,8 +16,8 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: '/hello',
-    element: <div>hello</div>,
+    path: '/short',
+    element: <Short />,
   }
 ])
 

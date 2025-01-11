@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useSidebar } from "../../contexts/SidebarContext";
 
 export default function SidebarElement({children, title, link}) {
