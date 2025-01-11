@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { createContext, useContext, useState } from "react";
 
-
 const SidebarContext = createContext(undefined);
 
 export function SidebarProvider({ children }) {
