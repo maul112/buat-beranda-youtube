@@ -36,10 +36,6 @@ export default function SideBar() {
     const { isOpen } = useSidebar();
     const location = useLocation();
 
-    // useEffect(() => {
-    //     console.log(location.pathname);
-    // }, [location]);
-
     const hr = (
         <hr className="border-1 border-slate-300 my-3" />
     )
@@ -65,7 +61,7 @@ export default function SideBar() {
                         <Navlink key={index} link={item.link} title={item.title} isSelected={location.pathname === item.link} additionClass={item.additionClass} showInMinimizeSidebar={item.showInMinimizeSidebar}>
                             {item.children}
                         </Navlink>
-                        {index === 2 && <hr />}
+                        {index === 2 && hr}
                     </>
                 ))}
                 {hr}
