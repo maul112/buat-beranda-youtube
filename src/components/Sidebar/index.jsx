@@ -41,16 +41,16 @@ export default function SideBar() {
     )
 
     const navLinkAttr = [
-        { title: "Beranda", link: "/", isSelected: true, additionClass: "", children: location.pathname === "/" ? <GoHomeFill /> : <GoHome /> },
-        { title: "Shorts", link: "/shorts", isSelected: false, additionClass: "", children: location.pathname === "/shorts" ? <RiVideoFill /> : <RiVideoLine /> },
-        { title: "Subscription", link: "/subscription", isSelected: false, additionClass: "", children: location.pathname === "/subscription" ? <MdSubscriptions /> : <MdOutlineSubscriptions /> },
-        { title: "You", link: "/you", isSelected: false, additionClass: "flex-row-reverse justify-end", children: <HiArrowSmallRight /> },
-        { title: "History", link: "/history", isSelected: false, additionClass: "", children: <GoHistory /> },
-        { title: "Playlist", link: "/playlist", isSelected: false, additionClass: "", children: <MdPlaylistPlay /> },
-        { title: "Your Videos", link: "/your-videos", isSelected: false, additionClass: "", children: location.pathname === "/your-videos" ? <RiFileVideoFill /> : <RiFileVideoLine /> },
-        { title: "Watch Later", link: "/watch-later", isSelected: false, additionClass: "", children: location.pathname === "/watch-later" ? <FiClock /> : <GoClockFill /> },
-        { title: "Liked Videos", link: "/liked-videos", isSelected: false, additionClass: "", children: <MdThumbUpOffAlt /> },
-        { title: "Downloads", link: "/downloads", isSelected: false, additionClass: "", children: <TfiDownload />, showInMinimizeSidebar: true },   
+        { title: "Beranda", link: "/", children: location.pathname === "/" ? <GoHomeFill /> : <GoHome />, showInMinimizeSidebar: true },
+        { title: "Shorts", link: "/shorts", children: location.pathname === "/shorts" ? <RiVideoFill /> : <RiVideoLine />, showInMinimizeSidebar: true },
+        { title: "Subscription", link: "/subscription", children: location.pathname === "/subscription" ? <MdSubscriptions /> : <MdOutlineSubscriptions />, showInMinimizeSidebar: true },
+        { title: "You", link: "/you", additionClass: "flex-row-reverse justify-end", children: <HiArrowSmallRight /> },
+        { title: "History", link: "/history", children: <GoHistory /> },
+        { title: "Playlist", link: "/playlist", children: <MdPlaylistPlay /> },
+        { title: "Your Videos", link: "/your-videos", children: location.pathname === "/your-videos" ? <RiFileVideoFill /> : <RiFileVideoLine /> },
+        { title: "Watch Later", link: "/watch-later", children: location.pathname === "/watch-later" ? <FiClock /> : <GoClockFill /> },
+        { title: "Liked Videos", link: "/liked-videos", children: <MdThumbUpOffAlt /> },
+        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
     ]
 
     return (
