@@ -50,21 +50,7 @@ export default function Sidebar() {
         { title: "Your Videos", link: "/your-videos", children: location.pathname === "/your-videos" ? <RiFileVideoFill /> : <RiFileVideoLine /> },
         { title: "Watch Later", link: "/watch-later", children: location.pathname === "/watch-later" ? <GoClockFill /> : <FiClock /> },
         { title: "Liked Videos", link: "/liked-videos", children: <MdThumbUpOffAlt /> },
-        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
-        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
-        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
-        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
-        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
-        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
-        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
-        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
-        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
-        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
-        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
-        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
-        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
-        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
-        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
+        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true }
     ]
 
     return (
