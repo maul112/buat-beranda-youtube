@@ -7,7 +7,7 @@ export default function Category() {
 
     return (
         <div className="overflow-x-scroll no-scrollbar">
-            <div className="flex gap-3">
+            <div className="flex gap-3 items-center">
                 <Catbut isSelected={selectedCategory === "All"} onClick={() => setSelectedCategory("All")}>All</Catbut>
                 <Catbut isSelected={selectedCategory === "Music"} onClick={() => setSelectedCategory("Music")}>Music</Catbut>
                 <Catbut isSelected={selectedCategory === "Gaming"} onClick={() => setSelectedCategory("Gaming")}>Gaming</Catbut>

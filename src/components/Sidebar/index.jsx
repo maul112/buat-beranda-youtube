@@ -29,8 +29,9 @@ import { MdThumbUpOffAlt } from "react-icons/md";
 import { MdThumbUpAlt } from "react-icons/md";
 
 import { TfiDownload } from "react-icons/tfi";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { cn } from "../../lib/utils";
 
 export default function SideBar() {
     const { isOpen } = useSidebar();
@@ -50,11 +51,23 @@ export default function SideBar() {
         { title: "Your Videos", link: "/your-videos", children: location.pathname === "/your-videos" ? <RiFileVideoFill /> : <RiFileVideoLine /> },
         { title: "Watch Later", link: "/watch-later", children: location.pathname === "/watch-later" ? <GoClockFill /> : <FiClock /> },
         { title: "Liked Videos", link: "/liked-videos", children: location.pathname === "/liked-videos" ? <MdThumbUpAlt /> : <MdThumbUpOffAlt /> },
-        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
+        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },
     ]
 
     return (
         <>
+            <div className={cn("md:hidden bg-white p-4 absolute transition-all duration-300", isOpen ? "translate-x-0" : "translate-x-[-100%]")}>
+                {navLinkAttr.map((item, index) => (
+                    <>
+                        <Navlink key={index} link={item.link} title={item.title} isSelected={location.pathname === item.link} additionClass={item.additionClass} showInMinimizeSidebar={item.showInMinimizeSidebar}>
+                            {item.children}
+                        </Navlink>
+                        {index === 2 && hr}
+                    </>
+                ))}
+                {hr}
+                <p className="font-semibold">Subscriptions</p>
+            </div>
             <div className={`hidden md:block ${isOpen ? "md:w-72" : "block md:w-28"} p-4`}>
                 {navLinkAttr.map((item, index) => (
                     <>
