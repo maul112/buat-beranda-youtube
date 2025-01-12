@@ -1,7 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
-import { BrowserRouter, createBrowserRouter, Routes } from 'react-router-dom';
+import { BrowserRouter, createBrowserRouter, Routes, Route } from 'react-router-dom';
 import ErrorPage from './pages/404';
 import { SidebarProvider } from './contexts/SidebarContext';
 import { SearchbarProvider } from './contexts/SearchbarContext';
@@ -30,7 +30,11 @@ createRoot(document.getElementById('root')).render(
           <Navbar />
           <div className="flex">
             <SideBar />
-            <Routes errorElement={<ErrorPage />} Route={router} />
+            <Routes>
+              <Route path="/" element={<Beranda />} />
+              <Route path="/shorts" element={<Short />} />
+              <Route path="/*" element={<ErrorPage />} />
+            </Routes>
           </div>
         </SearchbarProvider>
       </BrowserRouter>

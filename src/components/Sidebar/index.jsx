@@ -36,33 +36,33 @@ export default function SideBar() {
     const { isOpen } = useSidebar();
     const location = useLocation();
 
-    useEffect(() => {
-        console.log(location.pathname);
-    }, [location]);
+    // useEffect(() => {
+    //     console.log(location.pathname);
+    // }, [location]);
 
     const hr = (
         <hr className="border-1 border-slate-300 my-3" />
     )
 
     const navLinkAttr = [
-        { title: "Beranda", link: "/", isSelected: true, additionClass: "", children: <IoMdHome /> },
-        { title: "Shorts", link: "/shorts", isSelected: false, additionClass: "", children: <RiVideoLine /> },
-        { title: "Subscription", link: "/subscription", isSelected: false, additionClass: "", children: <MdOutlineSubscriptions /> },
+        { title: "Beranda", link: "/", isSelected: true, additionClass: "", children: <IoMdHome />, showInMinimizeSidebar: true },
+        { title: "Shorts", link: "/shorts", isSelected: false, additionClass: "", children: <RiVideoLine />, showInMinimizeSidebar: true },
+        { title: "Subscription", link: "/subscription", isSelected: false, additionClass: "", children: <MdOutlineSubscriptions />, showInMinimizeSidebar: true },
         { title: "You", link: "/you", isSelected: false, additionClass: "flex-row-reverse justify-end", children: <HiArrowSmallRight /> },
         { title: "History", link: "/history", isSelected: false, additionClass: "", children: <GoHistory /> },
         { title: "Playlist", link: "/playlist", isSelected: false, additionClass: "", children: <MdPlaylistPlay /> },
         { title: "Your Videos", link: "/your-videos", isSelected: false, additionClass: "", children: <RiFileVideoLine /> },
         { title: "Watch Later", link: "/watch-later", isSelected: false, additionClass: "", children: <FiClock /> },
         { title: "Liked Videos", link: "/liked-videos", isSelected: false, additionClass: "", children: <MdThumbUpOffAlt /> },
-        { title: "Downloads", link: "/downloads", isSelected: false, additionClass: "", children: <TfiDownload /> },
+        { title: "Downloads", link: "/downloads", isSelected: false, additionClass: "", children: <TfiDownload />, showInMinimizeSidebar: true },   
     ]
 
     return (
         <>
-            <div className={`${isOpen && "w-72"} p-4`}>
+            <div className={`${isOpen ? "w-72" : "w-28"} p-4`}>
                 {navLinkAttr.map((item, index) => (
                     <>
-                        <Navlink key={index} link={item.link} title={item.title} isSelected={location.pathname === item.link}>
+                        <Navlink key={index} link={item.link} title={item.title} isSelected={location.pathname === item.link} additionClass={item.additionClass} showInMinimizeSidebar={item.showInMinimizeSidebar}>
                             {item.children}
                         </Navlink>
                         {index === 2 && <hr />}
