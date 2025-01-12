@@ -32,7 +32,7 @@ import { TfiDownload } from "react-icons/tfi";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
-export default function SideBar() {
+export default function Sidebar() {
     const { isOpen } = useSidebar();
     const location = useLocation();
 
@@ -58,7 +58,7 @@ export default function SideBar() {
             <div className={`${isOpen ? "w-72" : "w-28"} p-4`}>
                 {navLinkAttr.map((item, index) => (
                     <>
-                        <Navlink key={index} link={item.link} title={item.title} isSelected={location.pathname === item.link} additionClass={item.additionClass} showInMinimizeSidebar={item.showInMinimizeSidebar}>
+                        <Navlink link={item.link} title={item.title} isSelected={location.pathname === item.link} additionClass={item.additionClass} showInMinimizeSidebar={item.showInMinimizeSidebar}>
                             {item.children}
                         </Navlink>
                         {index === 2 && hr}

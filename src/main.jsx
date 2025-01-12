@@ -6,7 +6,7 @@ import ErrorPage from './pages/404';
 import { SidebarProvider } from './contexts/SidebarContext';
 import { SearchbarProvider } from './contexts/SearchbarContext';
 import Navbar from './components/Navbar';
-import SideBar from './components/Sidebar';
+import Sidebar from './components/Sidebar';
 import Beranda from './pages/beranda';
 import Shorts from './pages/shorts';
 
@@ -29,7 +29,7 @@ createRoot(document.getElementById('root')).render(
         <SearchbarProvider>
           <Navbar />
           <div className="flex">
-            <SideBar />
+            <Sidebar />
             <Routes>
               {router.map((route, index) => (
                 <Route key={index} {...route} />
