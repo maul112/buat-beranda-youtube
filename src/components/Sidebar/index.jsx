@@ -36,10 +36,6 @@ export default function SideBar() {
     const { isOpen } = useSidebar();
     const location = useLocation();
 
-    useEffect(() => {
-        console.log(location.pathname);
-    }, [location]);
-
     const hr = (
         <hr className="border-1 border-slate-300 my-3" />
     )
@@ -54,18 +50,18 @@ export default function SideBar() {
         { title: "Your Videos", link: "/your-videos", isSelected: false, additionClass: "", children: location.pathname === "/your-videos" ? <RiFileVideoFill /> : <RiFileVideoLine /> },
         { title: "Watch Later", link: "/watch-later", isSelected: false, additionClass: "", children: location.pathname === "/watch-later" ? <FiClock /> : <GoClockFill /> },
         { title: "Liked Videos", link: "/liked-videos", isSelected: false, additionClass: "", children: <MdThumbUpOffAlt /> },
-        { title: "Downloads", link: "/downloads", isSelected: false, additionClass: "", children: <TfiDownload /> },
+        { title: "Downloads", link: "/downloads", isSelected: false, additionClass: "", children: <TfiDownload />, showInMinimizeSidebar: true },   
     ]
 
     return (
         <>
-            <div className={`${isOpen && "w-72"} p-4`}>
+            <div className={`${isOpen ? "w-72" : "w-28"} p-4`}>
                 {navLinkAttr.map((item, index) => (
                     <>
-                        <Navlink key={index} link={item.link} title={item.title} isSelected={location.pathname === item.link}>
+                        <Navlink key={index} link={item.link} title={item.title} isSelected={location.pathname === item.link} additionClass={item.additionClass} showInMinimizeSidebar={item.showInMinimizeSidebar}>
                             {item.children}
                         </Navlink>
-                        {index === 2 && <hr />}
+                        {index === 2 && hr}
                     </>
                 ))}
                 {hr}
