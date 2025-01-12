@@ -33,7 +33,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { cn } from "../../lib/utils";
 
-export default function SideBar() {
+export default function Sidear() {
     const { isOpen } = useSidebar();
     const location = useLocation();
 
