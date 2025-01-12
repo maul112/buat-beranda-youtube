@@ -15,7 +15,7 @@ export default function Navbar() {
     const { toggle } = useSidebar();
 
     return (
-        <div className="py-2 px-6 flex items-center justify-between">
+        <div className="py-2 px-6 fixed top-0 left-0 right-0 bg-white flex items-center justify-between">
             <div className="flex items-center">
                 <div className="rounded-full text-2xl p-2 hover:bg-slate-200" onClick={toggle}>
                     <RxHamburgerMenu />

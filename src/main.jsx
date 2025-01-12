@@ -28,7 +28,7 @@ createRoot(document.getElementById('root')).render(
       <BrowserRouter>
         <SearchbarProvider>
           <Navbar />
-          <div className="flex">
+          <div className="flex mt-14">
             <Sidebar />
             <Routes>
               {router.map((route, index) => (

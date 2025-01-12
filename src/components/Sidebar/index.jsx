@@ -37,7 +37,7 @@ export default function Sidebar() {
     const location = useLocation();
 
     const hr = (
-        <hr className={`border-1 border-slate-300 my-3 ${isOpen ? "" : "hidden"}`} />
+        <hr className={`border-1 border-slate-300 my-3 ${isOpen ? "" : "md:hidden"}`} />
     )
 
     const navLinkAttr = [
@@ -51,21 +51,37 @@ export default function Sidebar() {
         { title: "Watch Later", link: "/watch-later", children: location.pathname === "/watch-later" ? <GoClockFill /> : <FiClock /> },
         { title: "Liked Videos", link: "/liked-videos", children: <MdThumbUpOffAlt /> },
         { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
+        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
+        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
+        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
+        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
+        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
+        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
+        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
+        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
+        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
+        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
+        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
+        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
+        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
+        { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
     ]
 
     return (
         <>
-            <div className={`hidden md:block ${isOpen ? "md:w-72" : "block md:w-28"} p-4`}>
-                {navLinkAttr.map((item, index) => (
-                    <>
-                        <Navlink link={item.link} title={item.title} isSelected={location.pathname === item.link} additionClass={item.additionClass} showInMinimizeSidebar={item.showInMinimizeSidebar}>
-                            {item.children}
-                        </Navlink>
-                        {index === 2 && hr}
-                    </>
-                ))}
-                {hr}
-                <p className={`font-semibold ${isOpen ? "" : "hidden"}`}>Subscriptions</p>
+            <div className={`bg-white h-screen fixed overflow-y-scroll no-scrollbar ${isOpen ? "left-0 md:w-64" : "left-[-100%] md:left-0 md:w-28"} p-4`}>
+                {/* <div> */}
+                    {navLinkAttr.map((item, index) => (
+                        <>
+                            <Navlink link={item.link} title={item.title} isSelected={location.pathname === item.link} additionClass={item.additionClass} showInMinimizeSidebar={item.showInMinimizeSidebar}>
+                                {item.children}
+                            </Navlink>
+                            {index === 2 && hr}
+                        </>
+                    ))}
+                    {hr}
+                    <p className={`font-semibold ${isOpen ? "" : "md:hidden"}`}>Subscriptions</p>
+                {/* </div> */}
             </div>
         </>
     );

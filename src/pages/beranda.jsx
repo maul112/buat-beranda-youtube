@@ -8,7 +8,7 @@ export default function Beranda() {
     // const { search } = useSearchbar();
     const { isOpen } = useSidebar();
     return (
-        <main className="p-4 w-full">
+        <main className={`p-4 w-full ${isOpen ? "md:pl-[17rem]" : "md:pl-[8rem]"}`}>
             <Category />
             <main className={cn("grid gap-2 mt-5", isOpen ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3" : "grid-cols-1 md:grid-cols-2 lg:grid-cols-4")}>
                 {Array(10).fill(0).map((_, i) => (
