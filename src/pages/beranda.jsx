@@ -6,7 +6,7 @@ export default function Beranda() {
     // const { search } = useSearchbar();
     return (
         <main className="p-4 w-full">
-                <Category></Category>
+            <Category></Category>
         </main>
     )
 }
