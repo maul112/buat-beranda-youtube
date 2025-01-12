@@ -1,8 +1,8 @@
 import { useSidebar } from "../../contexts/SidebarContext";
 import Navlink from "./Navlink";
 
-import { IoMdHome } from "react-icons/io";
-import { IoHomeOutline } from "react-icons/io5";
+import { GoHome } from "react-icons/go";
+import { GoHomeFill } from "react-icons/go";
 
 import { RiVideoLine } from "react-icons/ri";
 import { RiVideoFill } from "react-icons/ri";
@@ -45,14 +45,14 @@ export default function SideBar() {
     )
 
     const navLinkAttr = [
-        { title: "Beranda", link: "/", isSelected: true, additionClass: "", children: <IoMdHome /> },
-        { title: "Shorts", link: "/shorts", isSelected: false, additionClass: "", children: <RiVideoLine /> },
-        { title: "Subscription", link: "/subscription", isSelected: false, additionClass: "", children: <MdOutlineSubscriptions /> },
+        { title: "Beranda", link: "/", isSelected: true, additionClass: "", children: location.pathname === "/" ? <GoHomeFill /> : <GoHome /> },
+        { title: "Shorts", link: "/shorts", isSelected: false, additionClass: "", children: location.pathname === "/shorts" ? <RiVideoFill /> : <RiVideoLine /> },
+        { title: "Subscription", link: "/subscription", isSelected: false, additionClass: "", children: location.pathname === "/subscription" ? <MdSubscriptions /> : <MdOutlineSubscriptions /> },
         { title: "You", link: "/you", isSelected: false, additionClass: "flex-row-reverse justify-end", children: <HiArrowSmallRight /> },
         { title: "History", link: "/history", isSelected: false, additionClass: "", children: <GoHistory /> },
         { title: "Playlist", link: "/playlist", isSelected: false, additionClass: "", children: <MdPlaylistPlay /> },
-        { title: "Your Videos", link: "/your-videos", isSelected: false, additionClass: "", children: <RiFileVideoLine /> },
-        { title: "Watch Later", link: "/watch-later", isSelected: false, additionClass: "", children: <FiClock /> },
+        { title: "Your Videos", link: "/your-videos", isSelected: false, additionClass: "", children: location.pathname === "/your-videos" ? <RiFileVideoFill /> : <RiFileVideoLine /> },
+        { title: "Watch Later", link: "/watch-later", isSelected: false, additionClass: "", children: location.pathname === "/watch-later" ? <FiClock /> : <GoClockFill /> },
         { title: "Liked Videos", link: "/liked-videos", isSelected: false, additionClass: "", children: <MdThumbUpOffAlt /> },
         { title: "Downloads", link: "/downloads", isSelected: false, additionClass: "", children: <TfiDownload /> },
     ]
