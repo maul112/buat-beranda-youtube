@@ -8,7 +8,7 @@ import { SearchbarProvider } from './contexts/SearchbarContext';
 import Navbar from './components/Navbar';
 import SideBar from './components/Sidebar';
 import Beranda from './pages/beranda';
-import Short from './pages/short'
+import Shorts from './pages/shorts';
 
 const router = [
   {
@@ -18,7 +18,7 @@ const router = [
   },
   {
     path: '/shorts',
-    element: <Short />,
+    element: <Shorts />,
   }
 ]
 

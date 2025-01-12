@@ -37,7 +37,7 @@ export default function SideBar() {
     const location = useLocation();
 
     const hr = (
-        <hr className="border-1 border-slate-300 my-3" />
+        <hr className={`border-1 border-slate-300 my-3 ${isOpen ? "" : "hidden"}`} />
     )
 
     const navLinkAttr = [
@@ -48,7 +48,7 @@ export default function SideBar() {
         { title: "History", link: "/history", children: <GoHistory /> },
         { title: "Playlist", link: "/playlist", children: <MdPlaylistPlay /> },
         { title: "Your Videos", link: "/your-videos", children: location.pathname === "/your-videos" ? <RiFileVideoFill /> : <RiFileVideoLine /> },
-        { title: "Watch Later", link: "/watch-later", children: location.pathname === "/watch-later" ? <FiClock /> : <GoClockFill /> },
+        { title: "Watch Later", link: "/watch-later", children: location.pathname === "/watch-later" ? <GoClockFill /> : <FiClock /> },
         { title: "Liked Videos", link: "/liked-videos", children: <MdThumbUpOffAlt /> },
         { title: "Downloads", link: "/downloads", children: <TfiDownload />, showInMinimizeSidebar: true },   
     ]
@@ -65,7 +65,7 @@ export default function SideBar() {
                     </>
                 ))}
                 {hr}
-                <p className="font-semibold">Subscriptions</p>
+                <p className={`font-semibold ${isOpen ? "" : "hidden"}`}>Subscriptions</p>
             </div>
         </>
     );
