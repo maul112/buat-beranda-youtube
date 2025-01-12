@@ -55,7 +55,7 @@ export default function Sidebar() {
 
     return (
         <>
-            <div className={`${isOpen ? "w-72" : "w-28"} p-4`}>
+            <div className={`hidden md:block ${isOpen ? "md:w-72" : "block md:w-28"} p-4`}>
                 {navLinkAttr.map((item, index) => (
                     <>
                         <Navlink link={item.link} title={item.title} isSelected={location.pathname === item.link} additionClass={item.additionClass} showInMinimizeSidebar={item.showInMinimizeSidebar}>
