@@ -55,7 +55,7 @@ export default function Sidebar() {
 
     return (
         <>
-            <div className={`bg-white h-screen fixed overflow-y-scroll no-scrollbar ${isOpen ? "left-0 md:w-64" : "left-[-100%] md:left-0 md:w-28"} p-4`}>
+            <div className={`bg-white h-screen fixed transition-all duration-300 md:transition-none md:duration-0 overflow-y-scroll no-scrollbar ${isOpen ? "left-0 md:w-64" : "left-[-100%] md:left-0 md:w-28"} p-4`}>
                 {/* <div> */}
                     {navLinkAttr.map((item, index) => (
                         <>
